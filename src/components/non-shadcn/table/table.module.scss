@@ -1,0 +1,81 @@
+@import '@/styles/screens.scss';
+@import '@/styles/color.scss';
+
+.tableCont {
+	border-radius: 0 0 0.5rem 0.5rem;
+	overflow: auto;
+
+	table {
+		width: 100%;
+		border-spacing: 0 0.5rem;
+		padding: 0 2em 1em 0;
+		border-collapse: separate;
+
+		@include screen('medium') {
+			width: 100%;
+		}
+
+		td:first-child,
+		th:first-child {
+			border-radius: 0.5rem 0 0 0.5rem;
+		}
+
+		td:last-child,
+		th:last-child {
+			border-radius: 0 0.5rem 0.5rem 0;
+		}
+
+		tbody {
+			tr {
+				height: 3.625rem;
+				padding: 1rem 0;
+				color: $eke-grey-100;
+				font-size: 0.8125rem;
+				font-weight: 400;
+				background: $eke-grey-300;
+				cursor: pointer;
+				white-space: nowrap;
+
+				&:hover {
+					background-color: $eke-green-100;
+					color: $white;
+				}
+			}
+		}
+
+		thead {
+			tr {
+				height: 3.5rem;
+				background: #fff;
+				text-transform: capitalize;
+
+				th {
+					font-weight: 400;
+					color: $eke-grey-200;
+					white-space: nowrap;
+					font-size: 0.8125rem;
+					line-height: 1.3rem;
+				}
+			}
+		}
+
+		th {
+			text-align: left;
+			padding-left: 2.81rem;
+		}
+		td {
+			padding-left: 2.81rem;
+		}
+
+		@include screen('medium') {
+			th {
+				padding: 0.937rem;
+				white-space: nowrap;
+			}
+			td {
+				padding: 0.937rem;
+				white-space: nowrap;
+			}
+		}
+	}
+}
