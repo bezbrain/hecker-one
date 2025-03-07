@@ -1,0 +1,28 @@
+export const staffAndStudent = [
+  {
+    id: 1,
+    matricNumber: "2000",
+    lastName: "Ola",
+    firstName: "Bello",
+    middleName: "Ezekiel",
+    biometricStatus: "Available",
+    gender: "male",
+    modeOfEntry: "UTME",
+    currentProgramme: "B.Sc. Accounting",
+    year: 1,
+    entryYear: "2024/2025",
+  },
+  {
+    id: 2,
+    matricNumber: "4000",
+    lastName: "Akande",
+    firstName: "Titus",
+    middleName: "Mike",
+    biometricStatus: "Unavailable",
+    gender: "male",
+    modeOfEntry: "UTME",
+    currentProgramme: "B.Sc. Economics",
+    year: 3,
+    entryYear: "2020/2021",
+  },
+];

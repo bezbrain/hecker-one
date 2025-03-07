@@ -12,72 +12,85 @@ import { HiOutlineTrash } from "react-icons/hi2";
 const columnHelper = createColumnHelper<any>();
 
 export const StaffStudentTableHeader = [
-  columnHelper.accessor("name", {
-    header: "Variant Name",
+  columnHelper.accessor("id", {
+    header: "S/N",
     cell: (props) => {
-      const variantName = (props.getValue() as string) || undefined;
+      const id = (props.getValue() as string) || undefined;
       return (
         <div className="flex gap-x-3">
-          <p className="capitalize">{variantName || "N/A"}</p>
+          <p className="capitalize">{id || "N/A"}</p>
         </div>
       );
     },
   }),
-  columnHelper.accessor("price", {
-    header: "Price",
+  columnHelper.accessor("matricNumber", {
+    header: "MATRIC NO.",
     cell: (props) => {
-      //   const price = (props.getValue() as string) || undefined;
-      return (
-        <p className="flex">
-          200
-          {/* {price ? `${nairaSymbol}${_formatNumber(price)}` : "N/A"} */}
-        </p>
-      );
+      const matricNumber = (props.getValue() as string) || undefined;
+      return <p className="flex">{matricNumber || "N/A"}</p>;
     },
   }),
-  columnHelper.accessor("count", {
-    header: "Count",
+  columnHelper.accessor("lastName", {
+    header: "LAST NAME",
     cell: (props) => {
-      const count = (props.getValue() as string) || undefined;
-      return <p className="flex">{count || "N/A"}</p>;
+      const lastName = (props.getValue() as string) || undefined;
+      return <p className="flex">{lastName || "N/A"}</p>;
     },
   }),
-  columnHelper.accessor("available_count", {
-    header: "Available count",
+  columnHelper.accessor("firstName", {
+    header: "FIRST NAME",
     cell: (props) => {
-      const availableCount = (props.getValue() as string) || undefined;
-      return <p className="capitalize flex">{availableCount || "N/A"}</p>;
+      const firstName = (props.getValue() as string) || undefined;
+      return <p className="">{firstName || "N/A"}</p>;
     },
   }),
-  columnHelper.accessor("id", {
-    header: "",
-    id: "actions",
-    cell: function Cell(props) {
-      //   const { isVariant, setIsVariant } = useProductContext();
-      //   const { handleVariantEdit } = useVariantContext();
-      //   const id = props.getValue() as string | number;
-
-      //   const handleRemoveVariant = () => {
-      //     const updatedVariant = isVariant.filter((variant) => variant.id !== id);
-      //     setIsVariant(updatedVariant);
-      //   };
-
-      return (
-        <div className="flex space-x-4">
-          <button className="pr-4">
-            <FaEdit
-              className="text-xl text-yellow-500"
-              //   onClick={() => handleVariantEdit(id)}
-            />
-          </button>
-          <button className="pr-4">
-            <HiOutlineTrash
-              className="text-xl text-red-700"
-              //   onClick={handleRemoveVariant}
-            />
-          </button>
-        </div>
-      );
+  columnHelper.accessor("middleName", {
+    header: "MIDDLE NAME",
+    cell: (props) => {
+      const middleName = (props.getValue() as string) || undefined;
+      return <p className="">{middleName || "N/A"}</p>;
+    },
+  }),
+  columnHelper.accessor("biometricStatus", {
+    header: "BIOMETRIC STATUS",
+    cell: (props) => {
+      const biometricStatus = (props.getValue() as string) || undefined;
+      return <p className="">{biometricStatus || "N/A"}</p>;
+    },
+  }),
+  columnHelper.accessor("gender", {
+    header: "GENDER",
+    cell: (props) => {
+      const gender = (props.getValue() as string) || undefined;
+      return <p className="">{gender || "N/A"}</p>;
+    },
+  }),
+  columnHelper.accessor("modeOfEntry", {
+    header: "MODE OF ENTRY",
+    cell: (props) => {
+      const modeOfEntry = (props.getValue() as string) || undefined;
+      return <p className="">{modeOfEntry || "N/A"}</p>;
+    },
+  }),
+  columnHelper.accessor("currentProgramme", {
+    header: "CURRENT PROGRAMME",
+    cell: (props) => {
+      const currentProgramme = (props.getValue() as string) || undefined;
+      return <p className="">{currentProgramme || "N/A"}</p>;
+    },
+  }),
+  columnHelper.accessor("year", {
+    header: "YEAR",
+    cell: (props) => {
+      const year = (props.getValue() as string) || undefined;
+      return <p className="">{year || "N/A"}</p>;
+    },
+  }),
+  columnHelper.accessor("entryYear", {
+    header: "ENTRY YEAR",
+    cell: (props) => {
+      const entryYear = (props.getValue() as string) || undefined;
+      return <p className="">{entryYear || "N/A"}</p>;
     },
   }),
 ];
